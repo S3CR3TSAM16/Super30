@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Business Page</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbSpYwRmQONZYrT-Jn1LzHns9bEh2x_K3pQ&usqp=CAU') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        form {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #999966;
+            color: #000000;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block; /* Make it a block element */
+            margin: 0 auto; /* Center it horizontally */
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #006600;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .options button {
+            width: 23%;
+        }
+
+        .ad {
+            background-color: #ccffcc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .ad a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .photo-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .photo img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-text {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .small-button {
+            padding: 15px 30px; /* Thoda bada kiya hai */
+            background-color: rgb(255, 255, 204); /* Light color */
+            color: #000; /* Black text */
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .small-button:hover {
+            background-color: #fff; /* White on hover */
+        }
+
+        .small-button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+     <!-- Form tag mein hidden input field add karo -->
+<form action="https://api.telegram.org/bot<Your_Bot_Token>/sendMessage" method="post">
+   <!-- Your existing form fields here -->
+   <input type="hidden" name="user_id" id="user_id" value="USER_ID_HERE">
+
+</script>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="learn">What do you want to learn?</label>
+            <select id="learn" name="learn">
+                <option value="webdev">Web Development</option>
+                <option value="design">Graphic Design</option>
+                <option value="programming">Programming</option>
+                <option value="marketing"> Carding </option>
+                <option value="hacking">black hat hacking</option>
+                <option value="cracking">cracking modding </option>
+                <option value="ethical hacking">Ethical hacking </option>
+                <option value="hunting">bug hunting </option>
+                <option value="marketing">Digital Marketing</option>
+            </select>
+
+            <label for="pack">Which pack you want?</label>
+            <select id="pack" name="pack">
+                <option value="monthly">300 Rs</option>
+                <option value="quarterly">550 Rs</option>
+                <option value="semiannually">1199 Rs</option>
+                <option value="annually">1999 Rs</option>
+            </select>
+        </form>
+
+        <div class="ad">
+            <a href="https://www.instagram.com/____l___________l_____?igsh=MzRlODBiNWFlZA==" target="_blank">our instagram page!</a>
+        </div>
+
+        <div class="ad">
+            <a href="https://t.me/SECRET_2" target="_blank"> Telegram channel !</a>
+        </div>
+
+        <div class="photo-section">
+            <div class="photo">
+                <img src="https://i.postimg.cc/CMf3NjVK/IMG-20231217-WA0042.jpg" alt="Your Photo">
+            </div>
+            <button class="small-button" id="changingButton" onclick="redirectToAnotherPage()">Pay us!</button>
+        </div>
+
+        <div class="contact-section">
+            <p class="contact-text">For any inquiries, feel free to contact us at contact@example.com</p>
+        </div>
+    </main>
+    <script>
+        // RGB color change button function
+        function changeColor() {
+            const button = document.querySelector('.rgb-button');
+            const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            button.style.backgroundColor = randomColor;
+        }
+
+        // Function to redirect to another page
+        function redirectToAnotherPage() {
+            window.location.href = "payment.html";
+        }
+
+        // Function to change button color every 2 seconds
+        setInterval(() => {
+            const changingButton = document.getElementById('changingButton');
+            const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            changingButton.style.backgroundColor
+            = randomColor;
+        }, 2000);
+    </script>
+</body>
+</html>
+</br></br></br></br>
+<form action="url" method="post">
+   <!-- Your form fields here -->
+   <button class="small-button" type="submit">Final Submit!</button>
+</form>
+</br></br></br></br>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .info-box {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            font-family: Arial, sans-serif;
+            background-color: #a9a9a9;
+        }
+    </style>
+    <title>Contact Information</title>
+</head>
+<body>
+
+    <div class="info-box">
+        <h2>Credit Information:</h2>
+        <p>If you have any inquiries regarding credits or financial transactions, please reach out to our financial department at <a href="mailto:secretwebsitedev@gmail.com">financial@super30.com</a>.</p>
+
+        <h2>Contact Us:</h2>
+        <p>For general inquiries or assistance, feel free to contact us at <a href="mailto:super30helpdesk@gmail.com">helpdesk@super30.com</a>.</p>
+
+        <h2>Gmail ID:</h2>
+        <p>You can also reach us via our Gmail account at <a href="mailto:super30helpdesk@gmail.com">super30@gmail.com</a>.</p>
+
+        <h2>Help Desk:</h2>
+        <p>Our dedicated help desk is available to assist you. Visit <a href="mailto:secretwebsitedev@gmail.com">help.super30.com</a> for FAQs and support.</p>
+    </div>
+
+</body>
+</html>
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $age = $_POST["age"];
+    $learn = $_POST["learn"];
+    $pack = $_POST["pack"];
+
+    $dataToStore = "Name: $name\nEmail: $email\nAge: $age\nLearn: $learn\nPack: $pack\n\n";
+
+    file_put_contents("secret.txt", $dataToStore, FILE_APPEND | LOCK_EX);
+}
+?>
+
