@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGCRjQ7eV0VpkuduCLq6okJ8IQ-RYys652xQ&usqp=CAU');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ensures full viewport height */
+            margin: 0; /* Removes default margin */
+            color: white; /* Adjust text color for visibility */
+        }
+
+        /* Additional styling can be added as needed */
+        h1, p, form {
+          color: aqua;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ραγмєиτ ƭσ ƭεαɱ ѕ3ϲя3τ</h1>
+    
+    <!-- QR Code for Payment -->
+    <img src="https://i.postimg.cc/65yR4Mz6/IMG-20240206-WA0000-2.jpg" alt="Payment QR Code">
+
+    <!-- Payment Amount and Details -->
+    <p>Amount </p>
+    <p>Pay to: Learn hacking from T3AM S3CR3T</p>
+
+    <!-- Redirect to WhatsApp after successful payment -->
+    <a href="http://t.me/T3AM_S3CR3T_C0NT4CT_BOT">
+        <button id="stylishButton" style="border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 2s ease;">Complete Payment</button>
+    </a>
+
+<script>
+    // JavaScript to change button color every 2 seconds with light colors
+    const lightColors = ['#FFC0CB', '#ADD8E6', '#98FB98', '#FFE4C4', '#FFD700'];
+
+    setInterval(function() {
+        const button = document.getElementById("stylishButton");
+        const randomColor = lightColors[Math.floor(Math.random() * lightColors.length)];
+        button.style.backgroundColor = randomColor;
+    }, 2000);
+</script>
+
+</body>
+</html>
